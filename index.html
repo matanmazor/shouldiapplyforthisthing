@@ -2,7 +2,7 @@
 <head>
   <title>Should I Apply For This Thing?</title>
   <script src="jquery/jquery.min.js"></script>
-
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -10,12 +10,12 @@
 function submitForm() {
   console.log('a');
   $("#loader").show();
-  setTimeout(()=>{$("#loader").hide(); $("#answer").show()}, 5000)
+  setTimeout(()=>{$("#loader").hide(); $("#answer").show(); $("#techno").show()}, 5000)
 }
 </script>
 
   <form onsubmit="submitForm();return false" action="#">
-  <h1>Should I apply for this thing?</h1>
+  <h3>Should I apply for this thing?</h3>
   <p>Answer a couple of questions and let an algorithm advise you on whether or not you should apply for this thing.</p>
 
   <label for="fname">Your field:</label>
@@ -30,10 +30,9 @@ function submitForm() {
   <br><br>
   <input type="submit" value="Submit">
   </form>
-  <img id='loader' src="Ajax-loader.gif" style="display:none;">
+  <img id='loader' src="Ajax-loader.gif" style="display:none;" class="center">
   <p id="answer" style="display:none;">The algorithm advises you to <u>apply for this thing</u>.</p>
-
-
+  <a href="technology.html" id="techno" style="display:none;">Learn more about the technology behind this page.</a>
 
 
 </body>
